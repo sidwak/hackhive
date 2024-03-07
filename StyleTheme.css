@@ -4,3 +4,12 @@
 .efcard:hover {
     transform: scale(1.05);
 }
+
+.card-body {
+text-align: left;
+}
+.card-img {
+height: 200px; /* Adjust height as needed */
+background-color: #be8484; /* Default background color for the image */
+object-fit: cover;
+}
