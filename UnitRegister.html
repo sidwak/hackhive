@@ -36,51 +36,53 @@
         </div>
       </div>
     </div>
-  </header>  
-  <div class="container-md">
-    <h1 class="pb-2 mb-4 border-bottom border-dark text-center">Buy Storage Unit</h1>
-    <div class="mx-auto mb-5" style="max-width: 350px; margin-top: 100px;">
-        <form action="LoginServlet" method="get" id="loginform">
-        <!-- <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-        <h1 class="h3 mb-3 fw-normal">Configure Unit</h1> 
-        <div class="form-floating" >
-          <input type="text" class="form-control" id="fname" name="fname" placeholder="Name..." required>
-          <label for="fname"> Item Name</label>
+  </header>
+  <h1 class="pb-2 mb-4 border-bottom border-dark text-center">Register Storage Unit</h1>   
+  <div class="container mt-5 mb-5">
+    
+    <form class="mx-auto" style="max-width: 350px; margin-top: 100px;">
+        
+      <div class="form-floating ">
+        <label for="unitName">Name for Unit:</label>
+        <input type="text" class="form-control" id="unitName" placeholder="Enter name for unit">
+      </div>
+      <div class="form-floating">
+        <p class="m-0 mt-2">Storage Unit Type</p>
+        <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+          <label class="btn btn-primary">
+            <input type="radio" name="type" id="truck" autocomplete="off" checked> Truck
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="type" id="shop" autocomplete="off"> Shop
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="type" id="taxi" autocomplete="off"> Taxi
+          </label>
         </div>
-        <div class="form-floating" >
-            <input type="text" class="form-control" id="fname" name="fname" placeholder="Name..." required>
-            <label for="fname"> Pickup Location</label>
-          </div>
-        <div class="form-floating">
-          <input type="datetime-local" class="form-control" id="fphn" name="fphn" placeholder="..." required>
-          <label for="fphn">Pickup Date</label>
-        </div>
-        <div class="form-floating">
-            <input type="datetime-local" class="form-control" id="fphn" name="fphn" placeholder="..." required>
-            <label for="fphn">Dropoff Date</label>
-        </div>
-        <p class="m-0 mb-2">Storage Type</p>
-        <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
-          <button type="button" class="btn btn-outline-primary">Truck</button>
-          <button type="button" class="btn btn-outline-primary">Shop</button>
-          <button type="button" class="btn btn-outline-primary">Taxi</button>
-        </div>
-        <p class="m-0 mb-2">Volume</p>
-        <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-primary">10KG</button>
-            <button type="button" class="btn btn-outline-primary">25KG</button>
-            <button type="button" class="btn btn-outline-primary">50KG</button>
-        </div>
-        <div class="form-floating mt-2">
-            <h6>Total Amount: 150 rs.</h6>
-        </div>
-        <button class="btn btn-primary w-100 py-2 mt-2" type="submit">Place order</button>
-      </form> 
-      <!-- <div class="alert alert-danger alert-dismissible hide show m-0 mt-3 p-2" id="alert">
-        <button type="button" class="btn-close" onclick="hidealert()"></button>
-        <strong>Failed!</strong><p>Invalid login credentials</p>
-      </div> -->
-      </div> 
+      </div>
+      <div class="form-floating mt-2">
+        <label for="maxVolume">Max Storage Volume:</label>
+        <input type="number" class="form-control" id="maxVolume" placeholder="Enter max storage volume">
+      </div>
+      <div class="form-floating">
+        <label for="unitLocation">Unit Location:</label>
+        <input type="text" class="form-control" id="unitLocation" placeholder="Enter unit location">
+      </div>
+      <p class="m-0 mt-2">Free Time Start:</p>
+      <div class="form-floating">
+        <label for="freeTimeStart"></label>
+        <input type="datetime-local" class="form-control" id="freeTimeStart">
+      </div>
+      <p class="m-0 mt-2">Free Time End:</p>
+      <div class="form-floating">
+        <input type="datetime-local" class="form-control" id="freeTimeEnd">
+      </div>
+      <div class="form-floating">
+        <label for="costPerHour">Cost per Hour:</label>
+        <input type="number" class="form-control" id="costPerHour" placeholder="Enter cost per hour">
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Register</button>
+    </form>
   </div>
   <!--Footer-->
   <div>
